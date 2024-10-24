@@ -19,6 +19,12 @@ function addThemeScripts()
             'uri'       => '/assets/css/header-footer.css',
             'condition' => 'is_global',
         ],
+        'home' => [
+            'uri'       => '/assets/css/home.css',
+            'condition' => function () {
+                return is_page_template('templates/home.php');
+            }
+        ],
     ];
 
     // Define scripts with conditions
@@ -41,6 +47,12 @@ function addThemeScripts()
             'uri'       => '/assets/js/jquery.splitlines.js',
             'condition' => function () {
                 return is_page_template('templates/page-about-us.php');
+            }
+        ],
+        'home-script' => [
+            'uri'       => '/assets/js/home.js',
+            'condition' => function () {
+                return is_page_template('templates/home.php');
             }
         ],
     ];
