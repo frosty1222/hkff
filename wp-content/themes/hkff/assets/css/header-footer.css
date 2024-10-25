@@ -1,0 +1,81 @@
+.language-switcher{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    .content{
+        text-align: right;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        max-width: 85px;
+        width: 100%;
+        gap: 22px;
+        li{
+            list-style: none;
+            position: relative;
+            a{
+                color: #000000;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                text-decoration: none;
+                padding-bottom: 10px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
+                    height: 1px;
+                    background: currentcolor;
+                    transform-origin: right center;
+                    transform: scaleX(0);
+                    transition: transform 0.83s cubic-bezier(0.33, 0, 0.13, 1) 0s;
+                }
+            }
+            a:hover::after{
+                transform: scaleX(1);
+                transform-origin: left center;
+            }
+        }
+    }
+}
+.nav-bar{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    ul{
+        width: 100%;
+        padding-left: 0px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            list-style: none;
+            text-align: left;
+            a{
+                font-size: 0;
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                height: 1rem;
+                span{
+                    letter-spacing: 0;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                    display: inline-block;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+

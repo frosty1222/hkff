@@ -3,7 +3,10 @@
  * Template Name: Home
  * Template Post Type: page.
  */
-get_header();?>
+$post_id = get_the_ID();
+$header = get_field('header');
+get_header();
+?>
 <section class="home-page">
     <div class="hero-banner" id="hero-banner">
         <div class="container">

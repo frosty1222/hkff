@@ -67,3 +67,7 @@ function remove_editor_for_specific_page_template() {
     }
 }
 add_action('admin_init', 'remove_editor_for_specific_page_template');
+function my_theme_enqueue_scripts() {
+    wp_enqueue_script('jquery'); // Enqueue jQuery if it's not already enqueued
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');

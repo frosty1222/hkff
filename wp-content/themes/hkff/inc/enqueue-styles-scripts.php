@@ -35,7 +35,7 @@ function addThemeScripts()
         ],
         'header-footer-script' => [
             'uri'       => '/assets/js/header-footer.js',
-            'condition' => 'is_global'
+            'condition' =>'is_global'
         ],
         // 'jquery-ui-script' => [
         //     'uri'       => '/assets/js/jquery-ui.min.js',
